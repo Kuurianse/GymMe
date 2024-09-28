@@ -1,4 +1,5 @@
 GymMe
+
 GymMe is a web-based online health and supplement selling application. It is a perfect place for health and fitness enthusiast to buy supplement and for the admin of the store to sell their product. The CEO of GymMe wants to hire your team to build this application. Before working there, you are given an assignment to make a simple version of this application. You may find some features which don’t make sense. But remember, it is just an assignment to improve and test your skill.
 As a web developer, you are asked to create a website using ASP.NET for this supplement selling application. You are also required to use Domain Driven Design method to develop the website. Using web service is optional in this project. The required layers are:
 -	View
