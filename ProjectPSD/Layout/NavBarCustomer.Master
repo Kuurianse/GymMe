@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NavBarCustomer.master.cs" Inherits="ProjectPSD.Layout.NavBarCustomer" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div> 
+            <asp:Button ID="orderSuppBtn" runat="server" Text="Order Supplement" style="margin-right:10px" OnClick="orderSuppBtn_Click" />
+            <asp:Button ID="historyBtn" runat="server" Text="History" style="margin-right:10px" OnClick="historyBtn_Click" />
+            <asp:Button ID="profileBtn" runat="server" Text="Profile" style="margin-right:10px" OnClick="profileBtn_Click" />
+            <asp:Button ID="logoutBtn" runat="server" Text="Logout" OnClick="logoutBtn_Click" />
+        </div>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
