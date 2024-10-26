@@ -1,44 +1,110 @@
-GymMe is a web app for buying health supplements, designed for fitness enthusiasts and managed by store admins. Your task is to build a simplified ASP.NET-based version using Domain Driven Design. The app has several layers:
+# GymMe
 
+**GymMe** is a web application designed for health and fitness enthusiasts to browse and purchase supplements, with features for admins to manage products and orders. Built with **ASP.NET** using **Domain-Driven Design (DDD)**, this project layers responsibilities to create a scalable and maintainable architecture.
 
-View – Displays information to users and handles input.
+## Overview
 
-Controller – Validates and forwards user input for processing.
+GymMe allows users to browse, order, and manage health supplements. Admins can manage inventory, handle orders, and view transaction reports. This project is a simplified version designed to showcase and test web development skills.
 
-Handler – Manages business logic and database operations.
+## Layers & Architecture
 
-Repository – Provides database access and object manipulation.
+The application is divided into six key layers, each handling a distinct responsibility:
 
-Factory – Handles complex object creation.
+1. **View** – Manages the user interface and user interactions.
+2. **Controller** – Validates and processes inputs from the View layer.
+3. **Handler** – Encapsulates business logic, delegating database operations to the Repository.
+4. **Repository** – Interfaces with the database, providing data manipulation methods.
+5. **Factory** – Encapsulates complex object creation.
+6. **Model** – Represents business data, using Entity Framework for database integration.
 
-Model – Represents business data with an Entity Framework.
+## User Roles & Permissions
 
+| Role     | Permissions                                                                                     |
+|----------|-------------------------------------------------------------------------------------------------|
+| **Admin**  | Manage products, handle orders, view customer data, access transaction reports.               |
+| **Customer** | Browse and order supplements, view order history, manage profile.                              |
+| **Guest**    | Register and log in.                                                                          |
 
-User Roles and Access
+### Admin Permissions
 
-Admin: Manage supplements, handle orders, view reports.
+- **View Customers**
+- **Insert, Update, Delete Supplements**
+- **View and Handle Orders**
+- **Update Profile**
+- **View Reports**
 
-Customer: View, order, and checkout supplements, view history.
+### Customer Permissions
 
-Guest: Login or register.
+- **Browse and Order Supplements**
+- **Manage Cart** (Add, Clear, Checkout)
+- **View Order History**
+- **Update Profile**
 
+### Guest Permissions
 
+- **Register**
+- **Log in**
 
-Key Pages
+## Key Pages & Functionalities
 
-Login/Register: Accessible to guests for user authentication.
+### Login
 
-Home: Displays user role and customer data (for admin).
+- Accessible only to guests.
+- Validates username and password.
+- Includes "Remember Me" checkbox for auto-login.
 
-Order Supplement: For customers to view and order supplements.
+### Register
 
-Profile: Allows users to update personal info and passwords.
+- Allows guests to create accounts.
+- Validates personal details (e.g., username, email, password).
 
-History: Shows past transactions for customers and all for admin.
+### Home
 
-Manage Supplements: Admin-only page to add, edit, or delete products.
+- Displays current user role.
+- Shows customer data (for admin users).
 
-Transaction Reports: Admin-only sales data and reports view.
+### Order Supplement
 
-The navigation bar adapts to user roles, simplifying access to relevant pages.
+- Displays supplement details for customers.
+- Allows ordering and managing the cart.
 
+### Profile
+
+- Editable user profile information and password update.
+  
+### History
+
+- Shows all customer transactions, with order detail view for each.
+
+### Manage Supplements
+
+- Admin-only access.
+- Options to add, update, and delete products.
+
+### Transaction Reports
+
+- Admin-only access.
+- Displays all transaction details with total income and subtotals.
+
+## Navigation Bar
+
+Dynamic navigation based on user role:
+
+- **Customer**: Order Supplement, History, Profile, Logout.
+- **Admin**: Home, Manage Supplements, Order Queue, Profile, Transaction Report, Logout.
+
+---
+
+## Development Requirements
+
+- **Framework**: ASP.NET
+- **Design Methodology**: Domain-Driven Design
+- **Database Access**: Entity Framework (optional web services)
+
+---
+
+## Setup & Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Kuurianse/GymMe.git
