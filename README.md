@@ -13,6 +13,7 @@ Factory – Handles complex object creation.
 
 Model – Represents business data with an Entity Framework.
 
+
 User Roles and Access
 
 Admin: Manage supplements, handle orders, view reports.
@@ -20,6 +21,7 @@ Admin: Manage supplements, handle orders, view reports.
 Customer: View, order, and checkout supplements, view history.
 
 Guest: Login or register.
+
 
 
 Key Pages
